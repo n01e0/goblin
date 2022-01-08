@@ -107,9 +107,9 @@ impl<'a> Strtab<'a> {
         Ok(self.strings.iter().map(|&(_key, value)| value).collect())
     }
     #[cfg(feature = "alloc")]
-    /// Converts `bytes` to `Vec` and returns it without considering `delim`.
+    /// converts `bytes` to `Vec` and returns it without considering `delim`.
     ///
-    /// Requires `feature = "alloc"`
+    /// Requires `feature = "alloc"
     pub fn to_raw_vec(&self) -> Vec<u8> {
         self.bytes.to_vec()
     }
